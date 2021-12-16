@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 3</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .wrapper {
+            height: 100vh;
+        }
+        
+        .header {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+            height: 105px;
+        }
+        
+        .navbar {
+            list-style: none;
+            display: flex;
+        }
+        
+        li {
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 10px 0;
+        }
+        
+        li:hover {
+            background-color: #ccc;
+        }
+        
+        .item {
+            padding: 5px 15px;
+        }
+        
+        .main {
+            padding-top: 115px;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            top: 0;
+            bottom: 0;
+        }
+        
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        #sidebar {
+            width: 20%;
+            border-right: 1px solid #ccc;
+        }
+        
+        .content {
+            width: 80%;
+        }
+        
+        p {
+            display: block;
+            margin: 10px 15px;
+            font-size: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <img src="./logo-k_cntt.png" alt="" srcset="">
+            <ul class="navbar">
+                <li class="item">Home</li>
+                <li class="item">Giới thiệu</li>
+                <li class="item">Tuyển sinh</li>
+                <li class="item">Đào tạo</li>
+                <li class="item">Nghiên cứu khoa học</li>
+                <li class="item">Hợp tác</li>
+                <!-- <li class="item">Sinh viên</li> -->
+                <!-- <li class="item">Cựu sinh viên</li> -->
+                <!-- <li class="item">Liên hệ</li> -->
+            </ul>
+        </div>
+        <div class="main">
+            <div id="sidebar">
+                <ul>
+                    <li onclick="clickSideBar(0)">Thông báo</li>
+                    <li onclick="clickSideBar(1)">Tin tức hoạt động</li>
+                    <li onclick="clickSideBar(2)">Đào tạo dại học</li>
+                    <li onclick="clickSideBar(3)">Đào tạo sau đại học</li>
+                </ul>
+            </div>
+            <div id="content">
+                <p>Thông báo 1</p>
+                <p>Thông báo 2</p>
+                <p>Thông báo 3</p>
+                <p>Thông báo 4</p>
+                <p>Thông báo 5</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function clickSideBar(num) {
+            document.getElementById("content").textContent = ''
+            var sidebar = document.getElementById("sidebar");
+            var liItem = sidebar.getElementsByTagName("li")
+            for (var i = 0; i < liItem.length; i++) {
+                liItem[i].style.backgroundColor = ''
+            }
+            sidebar.getElementsByTagName("li")[num].style.backgroundColor = '#ccc'
+            var text = liItem[num].textContent
+            for (var i = 1; i <= 6; i++) {
+                var node = document.createElement("p");
+                var textnode = document.createTextNode(text + " " + i);
+                node.appendChild(textnode)
+                document.getElementById("content").appendChild(node);
+            }
+        }
+    </script>
+</body>
+
+</html>

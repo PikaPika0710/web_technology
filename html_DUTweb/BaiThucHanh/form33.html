@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FORM33</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        function changeText() {
+            var st = document.form1.text1.value;
+            var text = "";
+            for (var i = 0; i < st.length; i++) {
+                if (st.charCodeAt(i) >= 97) {
+                    text = text + st.charAt(i).toUpperCase();
+                } else {
+                    text = text + st.charAt(i).toLowerCase();
+                }
+            }
+            document.form1.text2.value = text;
+        }
+    </script>
+</head>
+
+<body onLoad="document.form1.text1.focus()">
+
+    <form name="form1" action=" " method=" " style="text-align:center ">
+        <input type="text " name="text1" id=" " value=" " onblur="changeText() ">
+        <br><br>
+        <input type="text " name="text2" id=" " value=" ">
+    </form>
+
+
+</body>
+
+</html>

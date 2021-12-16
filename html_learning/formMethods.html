@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta>
+</head>
+<script language="JavaScript">
+    function DoiChuoi() {
+        var st = document.form1.t1.value
+        document.form1.t2.value = st.toUpperCase()
+    }
+</script>
+
+<body onLoad="document.form1.t1.focus()">
+    <form action="CheckLoginServlet" name="form1" method="post">
+        Username: <input type="text" name="t1" value="" style="margin-left: 5%;">
+        <br> Password: <input type="text" name="t2" value="" style="margin-left: 5%;">
+        <br>
+        <input type="submit" value="Login">
+
+    </form>
+    <form action="" name="form1" method="">
+        <input type="text" name="t1" value="" onBlur="DoiChuoi()">
+        <br>
+        <input type="text" name="t2" value="">
+
+
+
+    </form>
+</body>
+
+</html>

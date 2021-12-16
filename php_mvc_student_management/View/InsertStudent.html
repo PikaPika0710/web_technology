@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MVC</title>
+    <meta charset="utf-8">
+    <style>
+        label {
+            font-size: 20px;
+        }
+        
+        .text {
+            margin-left: 5%;
+            position: absolute;
+            text-align: center;
+            width: 10%;
+        }
+    </style>
+</head>
+
+<body style="margin-left: 40%;">
+    <h1>Thêm sinh viên </h1>
+    <form action="../Controller/C_Student.php" name="" method="post">
+        <label for="text">ID: </label>
+        <input class="text" type="text" name="id" value="" placeholder="Nhập id" required="required"><br><br>
+        <label for="text">Name: </label>
+        <input class="text" type="text" name="name" value="" placeholder="Nhập name" required="required"><br><br>
+        <label for="text">Age: </label>
+        <input class="text" type="text" name="age" value="" placeholder="Nhập age" required="required"><br><br>
+        <label for="text">University: </label>
+        <input class="text" type="text" name="university" value="" placeholder="Nhập university" required="required"><br><br>
+        <input type="submit" name="insert" value="SUBMIT" style="margin-right: 5%;">
+        <input type="reset" name="reset" value="RESET">
+    </form>
+    <p style="font-size:15px; font-style: italic;">
+        <a href="../index.php">Home Page</a>
+    </p>
+</body>
+
+</html>

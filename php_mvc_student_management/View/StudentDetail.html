@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>MVC</title>
+    <meta charset="utf-8">
+    <style>
+        b {
+            color: red;
+        }
+    </style>
+</head>
+
+<body style="margin-left: 40%; font-size: 20px;">
+    <h2>Chi tiết sinh viên</h2>
+    <?php   
+            echo "
+            
+            <p>  
+                - id:<b> ".$student->id." </b>
+            </p>
+            ";   
+            echo "
+                <p>  
+                   - name:<b> ".$student->name." </b>
+                </p>
+            ";
+            echo "
+                <p>  
+                    - age:<b> ".$student->age." </b>
+                </p>
+            ";
+            echo "  
+                <p>  
+                    - university: <b>".$student->university." </b>
+                </p>
+            ";
+        
+    ?>
+    <br>
+    <p>
+        <a href="javascript:history.back()" style="font-style: italic;">Back</a>
+    </p>
+</body>
+
+</html>

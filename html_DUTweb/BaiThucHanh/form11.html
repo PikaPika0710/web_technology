@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FORM11</title>
+    <meta charset="utf-8">
+    <style>
+        html {
+            background-color: lightgreen;
+        }
+        
+        h1 {
+            text-align: center;
+            color: black;
+            font-size: 20px;
+        }
+    </style>
+    <script language="JavaScript">
+        function checkInfo() {
+            var username = document.form1.username.value;
+            var password = document.form1.password.value;
+            if (username == "") {
+                alert("Please input username!");
+            }
+            if (password == "") {
+                alert("Please input password");
+            }
+        }
+
+        function reset() {
+
+        }
+    </script>
+</head>
+
+<body style="text-align: center;">
+    <div>
+        <h1>Login</h1>
+        <form action="" name="form1" method="">
+
+            Username: <input type="text" name="username" value="" style="margin-left: 5%;">
+            <br><br> Password: <input type="text" name="password" value="" style="margin-left: 5%;">
+            <br><br>
+            <input type="button" name="b1" value="OK" onClick="checkInfo()">
+            <input type="button" name="b2" value="Reset" style="margin-left:3%">
+
+        </form>
+
+    </div>
+</body>
+
+</html>

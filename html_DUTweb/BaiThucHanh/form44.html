@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FORM44</title>
+    <meta charset="utf-8">
+    <script language="JavaScript">
+        function setValueforSelectBox() {
+            var st = document.form1.text1.value;
+            if (!isNumeric(st)) {
+                alert("Please input a number!");
+            }
+            document.form1.select1.selectedIndex = st;
+
+        }
+
+        function isNumeric(value) {
+            return /^\d+$/.test(value);
+        }
+    </script>
+</head>
+
+<body onload="document.form1.text1.focus()">
+    <div>
+        <form name="form1" action="" method="">
+            <select name="select1" id="">
+                <option value="">Index 0</option>
+                <option value="">Index 1</option>
+                <option value="">Index 2</option>
+                <option value="">Index 3</option>
+            </select>
+            <input type="text" name="text1" id="">
+            <input type="button" name="b1" id="" value="OK" onclick="setValueforSelectBox()">
+        </form>
+    </div>
+</body>
+
+</html>

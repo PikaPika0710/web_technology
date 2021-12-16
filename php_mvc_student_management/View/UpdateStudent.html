@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MVC</title>
+    <meta charset="utf-8">
+</head>
+
+<body style="text-align: center;">
+
+</body>
+<?php
+echo'
+    <h1>Sửa thông tin sinh viên</h1>
+    <form action="../Controller/C_Student.php" name="" method="post">
+    <label for="text">ID: </label>
+    <input type="text" name="id" value="'.$student->id.'" required="required" readonly  size="30"><br><br>
+    <label for="text">Name: </label>
+    <input  type="text" name="name" value="'.$student->name.'" required="required"  size="30"><br><br>
+    <label for="text">Age: </label>
+    <input type="text" name="age" value="'.$student->age.'" required="required"  size="30"><br><br>
+    <label for="text">University: </label>
+    <input type="text" name="university" value="'.$student->university.'" required="required"  size="30" ><br><br>
+    <input type="submit" name="update" value="UPDATE" style="margin-right: 5%;">
+    <input type="reset" name="reset" value="RESET">
+</form>
+';
+?>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        FORM5
+    </title>
+    <meta charset="utf-8">
+    <script>
+        function upcaseText() {
+            var st = document.form1.colorText.value
+            document.form1.colorText.value = st.toUpperCase()
+        }
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <Form name=form1 method="" action="">
+            <input type="text" name="colorText" value="" onblur="upcaseText()">
+        </Form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Sinh viên</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h2>Xoá sinh viên</h2>
+    <?php
+        for($i = 1; $i<=sizeof($studentList) ; $i++){
+            echo "
+                <p> ".$i.". 
+                    <a href='C_Student.php?del=".$studentList[$i]->id."'>
+                        ".$studentList[$i]->name."
+                    </a>
+                    
+                </p>
+            ";
+        }
+    ?>
+        <br>
+        <p style="font-size:15px; font-style: italic;">
+            <a href="../index.php">Home Page</a>
+        </p>
+</body>
+
+</html>
